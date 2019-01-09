@@ -3,7 +3,7 @@ $background-dark: #512da8;
 $background-light: #9575cd;
 $background-pale: #d1c4e9;
 
-//Height variables
+// Height variables
 $carousel-item-height: 300px;
 
 @mixin zero-margin($pad-up-dn, $pad-left-right) {
@@ -12,6 +12,10 @@ $carousel-item-height: 300px;
 }
 
 .row-header {
+  @include zero-margin(0px, 0px);
+}
+
+.row-content {
   @include zero-margin(50px, 0px);
   border-bottom: 1px ridge;
   min-height: 400px;
