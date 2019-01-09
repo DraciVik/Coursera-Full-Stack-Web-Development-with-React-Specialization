@@ -64,7 +64,7 @@
             </li>
           </ul>
           <span class="navbar-text">
-            <a> <span class="fa fa-sign-in"></span> Login </a>
+            <a id="loginLink"> <span class="fa fa-sign-in"></span> Login </a>
           </span>
         </div>
       </div>
@@ -299,7 +299,9 @@
             <img src="img/logo.png" class="img-fluid" alt="#" />
           </div>
           <div class="col-12 col-sm-3 align-self-center">
-            <a class="btn btn-sm btn-warning btn-block"> Reserve Table </a>
+            <a id="reserveLink" class="btn btn-sm btn-warning btn-block">
+              Reserve Table
+            </a>
           </div>
         </div>
       </div>
@@ -572,6 +574,11 @@
               .children("span")
               .addClass("fa-pause");
           }
+        });
+        $("#loginLink").click(function() {
+          $("#loginLink")
+            .attr("data-toggle", "modal")
+            .attr("data-target", "#loginModal");
         });
       });
     </script>
