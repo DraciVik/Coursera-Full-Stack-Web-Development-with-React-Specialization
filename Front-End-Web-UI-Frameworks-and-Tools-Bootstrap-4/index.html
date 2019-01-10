@@ -154,7 +154,7 @@
                   class="col-12 col-sm-2 col-form-label"
                   >Number of Guests</label
                 >
-                <div id="radioOptions" class="col-12 col-sm-10">
+                <div id="radioOptions">
                   <div class="form-check form-check-inline">
                     <input
                       class="form-check-input"
@@ -223,70 +223,61 @@
                   class="col-12 col-sm-2 col-form-label"
                   >Section</label
                 >
-                <div class="col-12 col-sm-10">
-                  <div
-                    class="btn-group btn-group-toggle"
-                    id="smokingOrNot"
-                    data-toggle="buttons"
-                  >
-                    <label class="btn btn-success active">
-                      <input
-                        type="radio"
-                        name="options"
-                        id="option1"
-                        autocomplete="off"
-                        checked
-                        active
-                      />
-                      Non-smoking
-                    </label>
-                    <label class="btn btn-danger">
-                      <input
-                        type="radio"
-                        name="options"
-                        id="option2"
-                        autocomplete="off"
-                      />
-                      Smoking
-                    </label>
-                  </div>
+                <div
+                  class="btn-group btn-group-toggle"
+                  id="smokingOrNot"
+                  data-toggle="buttons"
+                >
+                  <label class="btn btn-success active">
+                    <input
+                      type="radio"
+                      name="options"
+                      id="option1"
+                      autocomplete="off"
+                      checked
+                      active
+                    />
+                    Non-smoking
+                  </label>
+                  <label class="btn btn-danger">
+                    <input
+                      type="radio"
+                      name="options"
+                      id="option2"
+                      autocomplete="off"
+                    />
+                    Smoking
+                  </label>
                 </div>
               </div>
               <div class="row form-group">
                 <label class="col-12 col-sm-2 col-form-label">
                   Date and Time
                 </label>
-                <div class="col-12 col-sm-5 align-self-center">
-                  <input
-                    type="text"
-                    name="date"
-                    class="form-control"
-                    placeholder="Date"
-                  />
-                </div>
-                <div class="col-12 col-sm-5 align-self-center">
-                  <input
-                    type="text"
-                    name="time"
-                    class="form-control"
-                    placeholder="Time"
-                  />
-                </div>
+                <input
+                  type="text"
+                  name="date"
+                  class="form-control col-sm-3 mr-3"
+                  placeholder="Date"
+                />
+                <input
+                  type="text"
+                  name="time"
+                  class="form-control col-sm-3 mr-3"
+                  placeholder="Time"
+                />
               </div>
-              <div class="form-row row">
-                <div class="col-12 col-sm-2"></div>
-                <div class="col-12 col-sm-10">
-                  <button
-                    type="button"
-                    class="btn btn-secondary btn-sm"
-                    data-dismiss="modal"
-                  >
-                    Cancel
-                  </button>
-                  <button type="submit" class="btn btn-primary btn-sm ml-1">
-                    Reserve
-                  </button>
-                </div>
+              <div class="row form-group">
+                <button
+                  type="button"
+                  class="btn btn-secondary offset-sm-2 btn-sm"
+                  data-dismiss="modal"
+                >
+                  Cancel
+                </button>
+                <button type="submit" class="btn btn-primary btn-sm ml-1">
+                  Reserve
+                </button>
               </div>
             </form>
           </div>
