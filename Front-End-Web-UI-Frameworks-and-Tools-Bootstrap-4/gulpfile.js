@@ -37,6 +37,7 @@ gulp.task("browser-sync", function() {
 gulp.task("default", ["browser-sync"], function() {
   gulp.start("sass:watch");
 });
+
 gulp.task("clean", function() {
   return del(["dist"]);
 });
