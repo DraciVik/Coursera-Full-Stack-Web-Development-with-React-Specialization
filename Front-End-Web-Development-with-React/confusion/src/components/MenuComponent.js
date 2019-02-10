@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import DishdetailComponent from "./DishdetailComponent";
 import {
   Card,
   CardImg,
@@ -15,7 +16,6 @@ class Menu extends Component {
       selectedDish: null
     };
   }
-
   onDishSelect(dish) {
     this.setState({ selectedDish: dish });
   }
