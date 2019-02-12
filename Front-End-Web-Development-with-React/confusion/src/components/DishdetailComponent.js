@@ -17,7 +17,7 @@ class DishDetail extends Component {
   render() {
     return (
       <div className="row">
-        <div className="col col-md-5 m-1">
+        <div className="col-12 col-md-5 m-1">
           <Card>
             <CardImg top src={this.props.image} alt={this.props.name} />
             <CardBody>
@@ -26,7 +26,7 @@ class DishDetail extends Component {
             </CardBody>
           </Card>
         </div>
-        <div className="col col-md-5 m-1">
+        <div className="col-12 col-md-5 m-1">
           <p>Comments</p>
         </div>
       </div>
