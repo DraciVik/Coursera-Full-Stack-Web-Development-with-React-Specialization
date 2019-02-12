@@ -30,6 +30,7 @@ class Menu extends Component {
           image={this.state.selectedDish.image}
           name={this.state.selectedDish.name}
           description={this.state.selectedDish.description}
+          comments={this.state.selectedDish.comments}
         />
       );
     else return <div />;
