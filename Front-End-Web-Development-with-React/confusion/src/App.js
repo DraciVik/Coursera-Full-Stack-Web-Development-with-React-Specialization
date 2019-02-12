@@ -11,10 +11,9 @@ class App extends Component {
       dishes: DISHES
     };
   }
-
   render() {
     return (
-      <div>
+      <div className="App">
         <Navbar dark color="primary">
           <div className="container">
             <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Component } from "react";
+import { Media } from "reactstrap";
 import {
   Card,
   CardImg,
@@ -8,36 +9,26 @@ import {
   CardTitle
 } from "reactstrap";
 
-class DishDetail extends React.Component {
+class DishDetail extends Component {
   constructor(props) {
     super(props);
-  }
-
-  renderDish(dish) {
-    if (dish != null) {
-      return (
-        <Card>
-          <CardImg
-            width="100%"
-            src={this.props.dish.image}
-            alt={this.props.name}
-          />
-          <CardBody>
-            <CardTitle>{this.props.name}</CardTitle>
-            <CardText>{this.props.dish.description}</CardText>
-          </CardBody>
-        </Card>
-      );
-    } else {
-      return <div />;
-    }
   }
 
   render() {
     return (
       <div className="row">
-        <div className="col-12 col-md-5" />
-        <div className="col-12 m-1 col-md-5" />
+        <div className="col col-md-5 m-1">
+          <Card>
+            <CardImg top src={this.props.image} alt={this.props.name} />
+            <CardBody>
+              <CardTitle>{this.props.name}</CardTitle>
+              <CardText>{this.props.description}</CardText>
+            </CardBody>
+          </Card>
+        </div>
+        <div className="col col-md-5 m-1">
+          <p>Comments</p>
+        </div>
       </div>
     );
   }
