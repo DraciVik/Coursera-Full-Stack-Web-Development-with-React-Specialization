@@ -6,29 +6,13 @@ class DishDetail extends Component {
     super(props);
   }
 
-  renderDish(dish) {
-    if (dish != null) {
-      return (
-        <Card>
-          <CardImg top src={dish.image} alt={dish.name} />
-          <CardBody>
-            <CardTitle>{dish.name}</CardTitle>
-            <CardText>{dish.description}</CardText>
-          </CardBody>
-        </Card>
-      );
-    } else {
-      return <div />;
-    }
-  }
-  renderComments(dish) {
-    const dateOptions = {
+  render() {
+    let dateOptions = {
       year: "numeric",
       month: "short",
       day: "2-digit"
     };
-
-    const comments = dish.comments.map(comment => {
+    const RenderComments = this.props.comments.map(comment => {
       return (
         <li key={comment.id}>
           <p>{comment.comment}</p>
@@ -41,21 +25,20 @@ class DishDetail extends Component {
         </li>
       );
     });
-    if (dish != null) {
-      return comments;
-    } else {
-      return <div />;
-    }
-  }
-
-  render() {
     return (
       <div className="row">
         <div className="col-12 col-md-5 m-1">
-          {this.renderDish(this.props.selectedDish)}
+          <Card>
+            <CardImg top src={this.props.image} alt={this.props.name} />
+            <CardBody>
+              <CardTitle>{this.props.name}</CardTitle>
+              <CardText>{this.props.description}</CardText>
+            </CardBody>
+          </Card>
         </div>
         <div className="col-12 col-md-5 m-1">
-          {this.renderComments(this.props.selectedDish)}
+          <h4>Comments</h4>
+          <ul className="list-unstyled">{RenderComments}</ul>
         </div>
       </div>
     );
