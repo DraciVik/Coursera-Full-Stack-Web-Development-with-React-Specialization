@@ -16,7 +16,6 @@ class Main extends Component {
   onDishSelect(dishId) {
     this.setState({ selectedDish: dishId });
   }
-
   render() {
     return (
       <div>
@@ -31,9 +30,9 @@ class Main extends Component {
         />
         <DishDetail
           dish={
-            this.state.dishes.filter(
-              dish => dish.id === this.state.selectedDish
-            )[0]
+            this.state.dishes.filter(dish => {
+              return dish.id === this.state.selectedDish;
+            })[0]
           }
         />
       </div>
